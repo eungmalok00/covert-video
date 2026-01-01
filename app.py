@@ -42,7 +42,7 @@ def transcribe_video(video_path: str, language: str):
     whisper_lang = 'en' if language == 'en' else 'km'
     
     # Load Whisper model
-    model = whisper.load_model("small")
+   model = whisper.load_model("tiny")
     
     # Transcribe with word-level timestamps
     result = model.transcribe(
@@ -222,4 +222,5 @@ def cleanup(file_id):
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+
 
